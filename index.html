@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/236x/55/42/74/554274e0ed20f74f051c49b107660fcf.jpg">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Menambahkan stroke teks */
+        .text-stroke {
+            -webkit-text-stroke: 1px white; /* Mengatur lebar stroke */
+            color: black; /* Mengatur warna teks */
+        }
+        .text-stroke1 {
+            -webkit-text-stroke: 1px black; /* Mengatur lebar stroke */
+            color: white; /* Mengatur warna teks */
+        }
+        /* Custom Styles for smooth transition and hover effects */
+        .project-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* Parallax background effect */
+        .parallax {
+            background-image: url('./img/girl.gif'); /* Ganti dengan path gambar yang diinginkan */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .project-section {
+            background-image: url('./img/girl.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .content-section {
+            background-image: url('./img/girl.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        /* Efek typing */
+        .typing-effect {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 4s linear 1s forwards, blink-caret 0.75s step-end infinite;
+        }
+
+        /* Animasi typing */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+    }
+
+    /* Efek blink cursor */
+    @keyframes blink-caret {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Header dengan Background Gambar -->
+<header class="bg-red-900 p-6 text-white shadow-lg sticky top-0 z-10" style="background-image: url(''); background-size: cover; background-position: center;">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-3xl font-extrabold text-red-500 text-stroke italic">
+            <a href="#" onclick="window.location.reload(); return false;">COLD <span class="italic font-extrabold text-blue-500">SVEN</span></a>
+        </div>
+        
+        <!-- Menu Navigasi Desktop -->
+        <nav class="hidden md:block">
+            <ul class="flex space-x-8">
+                <li><a href="#about" class="text-2xl font-extrabold hover:text-gray-300 transition text-stroke1">About</a></li>
+                <li><a href="#projects" class="text-2xl font-extrabold hover:text-gray-300 transition text-stroke1">Projects</a></li>
+                <li><a href="#contact" class="text-2xl font-extrabold hover:text-gray-300 transition text-stroke1">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Menu untuk Mobile -->
+        <div class="md:hidden">
+            <button class="text-white bg-transparent border-2 border-white rounded-lg p-2" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-red-900 text-white mt-4 p-4 rounded-lg shadow-lg">
+        <ul class="flex flex-col space-y-4">
+            <li><a href="#about" id="about" class="text-2xl font-extrabold hover:text-gray-300 transition text-stroke1">About</a></li>
+            <li><a href="#projects" class="text-2xl font-extrabold hover:text-gray-300 transition text-stroke1">Projects</a></li>
+            <li><a href="#contact" class="text-2xl font-extrabold hover:text-gray-300 transition text-stroke1">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Audio Player -->
+<div class="fixed bottom-4 right-4 z-20">
+    <audio id="background-music" loop>
+        <source src="./music/audio_download.webm" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="music-toggle" class="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+        Play Music
+    </button>
+</div>
+
+    <main>
+
+        <!-- About Section -->
+        <section id="about" class="py-40 parallax text-center text-white">
+            <div class="container mx-auto">
+                <h1 class="text-5xl font-extrabold text-blue-500 mb-6 text-stroke">
+                <span class="typing-effect">HI' <span class="text-red-500">COLD </span>SVEN</span>
+                </h1>
+                <p class="text-lg text-black-300 mb-5 font-extrabold text-stroke1">
+                    <span class="typing-effect text-2xl">Aku senang kau kembali</span>
+                </p>
+                <br>
+                <h2 class="text-5xl font-extrabold text-blue-500 mb-6 text-stroke">About Me</h2>
+                <p class="text-2xl text-black-300 mb-8 font-extrabold text-stroke1">Hi, I'm the creator this Website. Thank you for visiting my website </p>
+            </div>
+        </section>
+
+        <!-- Project Section -->
+        <section id="projects" class="py-20 project-section bg-opacity-60 text-center text-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-extrabold text-red-500 mb-8 text-stroke">My Favorite Pictures</h2>
+                <p class="text-2xl text-white-300 mb-8 text-stroke1 text-2xl font-extrabold">Check out some of the amazing characters I found!</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9">
+                    <!-- Project 1 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://i.imgur.com/blJhI37.jpeg'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Anime Girl</h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum animi ex optio velit possimus modi!</p>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://shorturl.at/8ec9t'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Power from Anime Chainsaw Man's</h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam omnis molestiae excepturi perferendis aliquam.</p>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://shorturl.at/RqR9X'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Esdeath from Anime Akame Ga Kill </h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo culpa vitae perspiciatis praesentium quis nostrum.</p>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://shorturl.at/QfDO4'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Yamanaka Ino from Anime Naruto Shippuden</h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae et corporis incidunt est suscipit velit.</p>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://shorturl.at/4qJeC'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Anime Girl Short Hair wrapped in a towel</h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis soluta animi ad enim reiciendis dolorum.</p>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://shorturl.at/4qJeC'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Anime Girl Short Hair wrapped in a towel</h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis soluta animi ad enim reiciendis dolorum.</p>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://shorturl.at/4qJeC'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Anime Girl Short Hair wrapped in a towel</h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis soluta animi ad enim reiciendis dolorum.</p>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="project-card bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+                        <div class="bg-cover bg-center h-96 rounded-lg mb-4" style="background-image: url('https://shorturl.at/4qJeC'); background-size: cover; background-position: center;"></div>
+                        <h3 class="text-xl font-semibold text-white mb-4 text-stroke">Anime Girl Short Hair wrapped in a towel</h3>
+                        <p class="text-white-300 text-stroke1 text-2xl font-extrabold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis soluta animi ad enim reiciendis dolorum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 content-section bg-opacity-1 text-center text-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-extrabold text-red-500 mb-4 text-stroke">Contact Me</h2>
+                <p class="text-2xl font-extrabold text-white-300 mb-8 text-stroke1">Feel free to reach out for collaborations or just to say hi!</p>
+                <!-- WhatsApp Link -->
+                <a href="https://wa.me/6283833025236?text=Hello%20Sven,%20Aku%20terkesan%20dengan%20karyamu%20mari%20kita%20diskusikan%20terkait%20kerja%20sama%20kita!" 
+                   class="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition text-xl shadow-lg hover:shadow-xl text-stroke"
+                   target="_blank">
+                    Send Message on WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-900 py-6 text-center" style="background-image: url(''); background-size: cover; background-position: center;">
+        <p class="text-stroke">&copy; 2024 Hilal Anshar Arnafian | All Rights Reserved</p>
+    </footer>
+
+<!-- Script for Mobile Menu Toggle -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    // Toggle menu visibility when the hamburger button is clicked
+    menuToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close the menu when a link is clicked
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Play Music
+    const musicToggle = document.getElementById('music-toggle');
+    const backgroundMusic = document.getElementById('background-music');
+    musicToggle.addEventListener('click', function () {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            musicToggle.textContent = 'Pause Music';
+        } else {
+            backgroundMusic.pause();
+            musicToggle.textContent = 'Play Music';
+        }
+    });
+</script>
+
+
+    <!-- Script for Smooth Scrolling -->
+    <script>
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetID = this.getAttribute('href');
+                const targetElement = document.querySelector(targetID);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

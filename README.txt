@@ -1,0 +1,4 @@
+- Website ini hanya untuk Hilal saja
+- Karena saya membuat dengan susah payah
+- Jika ada yang copyright untuk buat belajar tidak masalah
+- Jangan Hak Cipta / Hak Claim lur
